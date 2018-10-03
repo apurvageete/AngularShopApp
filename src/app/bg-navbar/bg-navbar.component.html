@@ -7,15 +7,18 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" routerLink="/0">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="#">Shopping Cart</a>
+        <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
       </li>
       <li class="nav-item hidden ">
-          <a class="nav-link" routerLink="/">SignUp <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="signup">SignUp Or <span class="sr-only">(current)</span></a>
         </li>
-    
+        
+        <li class="nav-item hidden ">
+            <a class="nav-link" routerLink="">LogIn  <span class="sr-only">(current)</span></a>
+          </li>
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -25,12 +28,10 @@
         </div>
       </li> 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
+  
+      
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)='logout()'>Logout</button>
+    
     
 
   </div>

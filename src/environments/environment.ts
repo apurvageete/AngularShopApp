@@ -11,6 +11,12 @@ export const environment = {
     projectId: "shoppingweb-aa230",
     storageBucket: "shoppingweb-aa230.appspot.com",
     messagingSenderId: "10011152281"
+  },
+  social:{
+
+  },
+  database:{
+
   }
 };
 

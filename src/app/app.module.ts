@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import { FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import {RouterModule} from '@angular/router'
-
+import { RouterModule } from '@angular/router'
+import{HttpModule, Http} from '@angular/http'
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database'
 import { environment } from '../environments/environment.prod';
 import { HomeComponent } from './home/home.component';
@@ -25,10 +25,14 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     FormsModule,
+    
+    HttpModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    RouterModule.forRoot([{path:'',component:HomeComponent}])
+    RouterModule.forRoot([{ path: '', component: LoginComponent },
+    { path: 'signup', component: SignupComponent },
+{ path:'home',component:HomeComponent}])
 
   ],
   providers: [],
