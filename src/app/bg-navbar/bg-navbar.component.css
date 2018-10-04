@@ -2,3 +2,9 @@
     color: #FFFFFF;
     background-color: #CC3333;
 }
+.dropdown-toggle{
+    cursor: pointer;
+}
+.btn-onlinesuccess{
+    background-color: #FFFFFF
+}
