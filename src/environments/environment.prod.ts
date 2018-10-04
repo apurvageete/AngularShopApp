@@ -13,5 +13,6 @@ export const environment = {
   },
   database:{
 
-  }
+  },
+  socialAuthEnabled:true
 };

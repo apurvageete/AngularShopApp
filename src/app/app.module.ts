@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { ManageOrdersComponent } from './admin/manage-orders/manage-orders.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AuthService } from './auth.service';
 
 
 
@@ -43,15 +44,15 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    RouterModule.forRoot([{ path: '', component: LoginComponent },
+    RouterModule.forRoot([{ path: 'home', component: HomeComponent },
     { path: 'signup', component: SignupComponent },
-    { path: 'home', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'my/orders', component: MyOrdersComponent },
     { path: 'admin/orders', component: ManageOrdersComponent },
     { path: 'admin/products', component: AdminProductsComponent }])
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
